@@ -1,0 +1,20 @@
+.footer {
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 4rem;
+
+  :global(html.dark) & {
+    border-top-color: #333;
+  }
+}
+
+.content {
+  color: #666;
+  font-size: 0.875rem;
+
+  :global(html.dark) & {
+    color: #999;
+  }
+}

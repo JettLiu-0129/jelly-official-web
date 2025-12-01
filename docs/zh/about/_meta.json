@@ -1,0 +1,13 @@
+[
+  "index",
+  "contact",
+  {
+    "type": "divider"
+  },
+  {
+    "type": "section-header",
+    "label": "公告"
+  },
+  "privacy",
+  "terms"
+]

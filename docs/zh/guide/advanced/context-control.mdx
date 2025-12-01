@@ -1,0 +1,39 @@
+# 控制上下文
+
+Jelly 最强大的功能之一，就是可以控制翻译的上下文。本文将介绍如何使用 Jelly 的上下文功能。
+
+## 在划词功能中使用
+
+### 自动 OCR 上下文
+
+在对单词触发划词功能时，Jelly 会自动调用 OCR 识别单词附近的一小块文本，作为上下文提供；
+
+<video controls muted width="100%">
+  <source src="/videos/auto-ocr-context-demo.mp4" type="video/mp4" />
+</video>
+
+### （Pro 专属）应用内划词上下文
+
+进行应用内划词时，父窗口的文本会自动作为上下文提供。
+
+<video controls muted width="100%">
+  <source src="/videos/text-selection-context-demo.mp4" type="video/mp4" />
+</video>
+
+## 在截图功能中使用
+
+截图功能选定截屏区域后，Jelly 会自动进行 OCR，将整个选区的文本作为上下文提供。
+
+之后 hover 某个句子时，Jelly 会自动匹配上下文，以提供给 AI 工具调用。
+
+<video controls muted width="100%">
+  <source src="/videos/screenshot-context-demo.mp4" type="video/mp4" />
+</video>
+
+## 注意事项
+
+目前 Jelly 会根据输入长度自动决定上下文长度。如果上下文太长，会自动截断到一个合理的长度。
+
+## 在其他 AI 工具中使用
+
+您可以通过在 AI 提示词中增加`{{context}}`占位符，以消费自动获取的上下文。

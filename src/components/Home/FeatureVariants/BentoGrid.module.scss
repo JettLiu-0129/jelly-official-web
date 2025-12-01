@@ -1,0 +1,236 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.975fr 0.975fr 1.05fr;
+  // Custom layout for 5 items
+  grid-template-areas:
+    "a a b"
+    "a a b"
+    "a a c"
+    "d d c"
+    "d d e"
+    "d d e";
+
+  // Smaller row unit since now items span 2-3 rows
+  grid-auto-rows: minmax(180px, auto);
+  gap: 24px;
+}
+
+// Assign areas to children automatically
+.card {
+  &:nth-child(1) {
+    grid-area: a;
+  }
+  &:nth-child(2) {
+    grid-area: b;
+  }
+  &:nth-child(3) {
+    grid-area: c;
+  }
+  &:nth-child(4) {
+    grid-area: d;
+  }
+  &:nth-child(5) {
+    grid-area: e;
+  }
+  &:nth-child(6) {
+    display: none;
+  } // Hide 6th item as requested
+  // Add more if needed
+
+  background: var(--rp-c-bg-soft);
+  border: 1px solid var(--rp-c-divider);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  // Make these cards span 2 columns
+  // &.large { ... } - Handled by grid-template-areas now!
+
+  &:hover {
+    // transform: translateY(-4px); // Removed displacement
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--rp-c-divider-light);
+    background: var(--rp-c-bg-mute);
+  }
+}
+
+.textContent {
+  padding: 32px 32px 24px;
+  z-index: 2;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.icon {
+  font-size: 28px;
+  display: none; // Hiding icon as requested to focus on visuals, or uncomment to show
+}
+
+.title {
+  font-size: 28px; // Increased size
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--rp-c-text-1);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.details {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--rp-c-text-2);
+  margin: 0;
+  max-width: 90%;
+  opacity: 0.8;
+}
+
+.mediaContainer {
+  width: 100%;
+  aspect-ratio: 105 / 70;
+  position: relative;
+  // min-height removed to strictly follow aspect ratio
+
+  border-top: 1px solid var(--rp-c-divider);
+  margin-top: auto; // Pushes to bottom if flex column
+  overflow: hidden;
+  border-radius: 18px;
+
+  // Carousel Indicators - moved here from .mediaPlaceholder
+  .carouselIndicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+    width: 60%;
+    justify-content: center;
+
+    .indicator {
+      height: 4px;
+      flex: 1;
+      max-width: 40px;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.active {
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+// Ensure the container clips correctly
+.mediaContainer :global(.video-bg) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(20px) opacity(0.5);
+  transform: scale(1.2); // Avoid blur edges
+  z-index: 0;
+}
+
+.mediaPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rp-c-text-3);
+  font-size: 14px;
+  background: var(--rp-c-bg-mute);
+
+  &.empty {
+    // Nice stripe pattern for empty state
+    background-image: linear-gradient(
+        45deg,
+        var(--rp-c-bg) 25%,
+        transparent 25%,
+        transparent 75%,
+        var(--rp-c-bg) 75%,
+        var(--rp-c-bg)
+      ),
+      linear-gradient(
+        45deg,
+        var(--rp-c-bg) 25%,
+        transparent 25%,
+        transparent 75%,
+        var(--rp-c-bg) 75%,
+        var(--rp-c-bg)
+      );
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.5;
+  }
+}
+
+.image,
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// Tablet (iPad) - 2 Columns
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d e";
+  }
+}
+
+// Mobile - 1 Column
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f";
+    gap: 16px;
+  }
+
+  // Remove manual large override if any remains
+
+  .textContent {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

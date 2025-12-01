@@ -1,0 +1,112 @@
+import DownloadIcon from "@/components/DownloadIcon";
+
+# 浏览器扩展
+
+由于应用沙盒限制，Jelly 无法直接操作您的浏览器，因此我开发了一个浏览器扩展（Jelly Web Helper）。
+
+它目前主要的作用是，帮您自动填入 AI 提示词。此外，它还可以自动发送提示词、复用当前 tab、开启新对话等。未来可能会支持更多浏览器自动化功能。
+
+## 支持情况
+
+目前 Jelly Web Helper 仅支持 Chromium 内核的浏览器，例如 Chrome、Edge。
+
+## Chrome 开发者模式安装扩展步骤
+
+目前 Jelly Web Helper 还没有上架 Chrome Web Store，您可以通过开发模式扩展的方式安装。
+
+[前往 GitHub 下载](https://github.com/Jellyfish-Studio/jelly-web-helper)
+
+{/* 
+<div style={{ alignItems: "center", display: "flex" }}>
+    <span>下载 Jelly Web Helper 开发版（v1.0.0）：</span>
+    <div
+      style={{
+        width: "30px",
+        display: "inline-block",
+        transform: "translateY(2px)",
+      }}
+    >
+      <DownloadIcon
+        href="/files/jelly-web-helper-1.0.0.zip"
+        fileName="jelly-web-helper-1.0.0.zip"
+      />
+    </div>
+  </div>
+*/}
+
+:::details 开发模式扩展安装教程（来自 ChatGPT）
+
+### 1. 准备扩展文件
+
+你需要有一个扩展的文件夹，里面包含：
+
+- `manifest.json`
+- 以及扩展所需的其他资源文件（`js/css/html` 等）
+
+常见结构：
+
+```
+my-extension/
+  ├── manifest.json
+  ├── background.js
+  ├── content.js
+  ├── popup.html
+  └── icons/
+```
+
+如果你拿到的是 `.zip` 或 `.crx` 文件，请先解压为一个文件夹。
+
+---
+
+### 2. 打开 Chrome 扩展管理页面
+
+在 Chrome 地址栏输入：
+
+```
+chrome://extensions/
+```
+
+回车打开扩展管理页面。
+
+---
+
+### 3. 开启开发者模式
+
+在右上角找到开关：
+
+> **开发者模式（Developer mode）**
+
+打开它。
+
+![Image](https://i.ytimg.com/vi/sZeUZjhOfgM/maxresdefault.jpg?utm_source=chatgpt.com)
+
+![Image](https://helpdeskgeek.com/wp-content/pictures/2020/07/Chrome-DevTools-Menu.png?utm_source=chatgpt.com)
+
+---
+
+### 4. 加载已解压的扩展
+
+点击左侧按钮：
+
+> **加载已解压的扩展（Load unpacked）**
+
+然后选择你的扩展文件夹（包含 `manifest.json` 的根目录）。
+
+---
+
+### 5. 安装完成！
+
+加载成功后，你会看到扩展出现在列表里，并且可以：
+
+- 开启/关闭扩展
+- 查看背景页日志
+- 检查 popup
+- 查看权限等
+
+---
+
+:::
+
+## 源码
+
+Jelly Web Helper 是开源的，您可以审查或贡献代码。[仓库地址](https://github.com/JettLiu-0129/jelly-web-helper)

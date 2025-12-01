@@ -1,0 +1,23 @@
+[
+    {
+        "type": "dir",
+        "name": "tool-config",
+        "label": "配置工具",
+        "collapsible": true,
+        "collapsed": false
+    },
+    {
+        "type": "dir",
+        "name": "service-config",
+        "label": "配置服务",
+        "collapsible": true,
+        "collapsed": false
+    },
+    {
+        "type": "dir",
+        "name": "tool-use",
+        "label": "使用工具",
+        "collapsible": true,
+        "collapsed": false
+    }
+]

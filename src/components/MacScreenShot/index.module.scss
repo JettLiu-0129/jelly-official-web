@@ -1,0 +1,28 @@
+.macScreenShotWrap {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+
+  /* 使用伪元素承载阴影 */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    /* 比图片小 2px (上下左右各 1px) */
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.08),
+      0 8px 32px rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+.macScreenShot {
+  display: block;
+  border-radius: 20px;
+  /* 向内裁剪1px以去除截图边框 */
+  clip-path: inset(1px round 20px);
+}

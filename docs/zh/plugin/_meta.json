@@ -1,0 +1,12 @@
+[
+  "market",
+  "add-service-plugin",
+  {
+    "type": "divider"
+  },
+  {
+    "type": "section-header",
+    "label": "插件开发"
+  },
+  "development"
+]

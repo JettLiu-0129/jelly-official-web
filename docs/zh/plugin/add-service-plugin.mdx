@@ -1,0 +1,27 @@
+import MacScreenShot from "@/components/MacScreenShot";
+
+# 添加服务插件
+
+本页面介绍如何在 Jelly 中安装和使用插件，以扩展可用服务。
+
+## 安装插件
+
+1. 从[插件市场](/plugin/market)下载插件，确认文件扩展名为`.jellyplugin`
+
+2. 打开 Jelly 设置 -> 服务提供商，点击左侧列表底部加号
+
+<MacScreenShot src="/add-service-provider.png" />
+
+3. 点击“从插件添加”
+4. 选择“.jellyplugin”文件
+5. 点击"安装"按钮
+
+:::info
+如果您开启了“插件开发者模式”，在这一步的时候也可以选择一个目录来安装插件。Jelly 在每次调用服务时都会重新创建 JS 运行时，因此可以达到热更新的效果，非常适合用于开发插件。
+:::
+
+## 修改插件服务顺序
+
+安装插件后，插件默认会出现在列表最后一个。如果您想要让插件实际生效，通常还需要修改插件服务在列表中的顺序。
+
+请查看[顺序问题的说明](/guide/basic/service-config#列表顺序说明)

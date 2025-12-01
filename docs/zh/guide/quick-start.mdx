@@ -1,0 +1,63 @@
+import { Shortcut } from "@/components/Kbd";
+import MacScreenShot from "@/components/MacScreenShot";
+
+# 快速开始
+
+欢迎您使用 Jelly！
+
+## 下载安装
+
+Jelly 目前仅支持 macOS 15+ 系统。为了更好的使用体验，建议您升级到 MacOS 26+。
+
+[在 Mac App Store 中打开](https://apps.apple.com/cn/app/jelly-%E5%8D%B3%E7%AB%8B%E8%AF%91/id6756085521?mt=12Jelly即立译)
+
+## 前提
+
+### 1. 下载系统翻译语言包
+
+Jelly 的划词气泡窗中使用了 MacOS 系统翻译，以此来提供高速、离线的翻译体验。系统翻译功能依赖您先下载语言包。
+
+<MacScreenShot src="/language-pack.png" />
+
+### 2. 配置 大模型 API Key
+
+Jelly 本身不提供 AI 服务，内置的 AI 功能依赖于第三方。大多数第三方服务需要 API Key 才能访问。
+
+首次使用前，需要[配置服务提供商](/guide/basic/service-config)。
+
+## 基本使用
+
+### 划词
+
+1. 选中任意文本
+2. 按下划词快捷键（默认为 <Shortcut keys={['Control', 'Q']} />）
+3. 若您选中了文本，划词气泡窗会直接出现。若未选中，会出现十字，您可以框选屏幕区域来选择内容。
+
+<img
+  className="img-radius-sm"
+  style={{ maxWidth: "200px" }}
+  src="/popover.png"
+/>
+
+4. 您可以通过点击气泡窗中的按钮来进一步调用各种功能
+
+### 输入
+
+1. 按下打开输入浮窗快捷键（默认为 <Shortcut keys={['Control', 'W']} />）
+2. 输入一段文本
+3. 按下回车键
+4. 浮窗会自动调用预设的各种功能。您也可以在设置中配置浮窗的功能，以及是否自动执行。
+
+### 截屏
+
+1. 按下截屏快捷键（默认为 <Shortcut keys={['Control', 'E']} />）
+2. 框选需要翻译的区域
+3. 等待 OCR 识别和翻译
+
+## 下一步
+
+- 了解如何[配置服务提供商](/guide/basic/service-config)
+
+- 了解如何[定制窗口工具](/guide/basic/tool-config/window-tools)
+
+- 了解如何[使用收藏功能](/guide/basic/tool-use/favorite)

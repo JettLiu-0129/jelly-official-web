@@ -1,0 +1,53 @@
+# 配置工具图标
+
+Jelly 的工具支持灵活的图标配置，您可以配置或创作喜爱的图标，以帮助您记忆功能。您可以点击任一工具的设置，然后点击设置表单中的图标，进入图标编辑界面。
+
+## 注意
+
+:::warning 自定义图标的限制
+为了确保显示效果，目前 Jelly 的自定义图标系统只支持矢量风格的图标。
+
+如果是 png 格式，Jelly 会尝试以模板方式渲染。（非透明通道用纯色着色，透明通道不着色）。
+:::
+
+## 内置图标
+
+Jelly 支持系统内置的 SF Symbol 图标，您可填入图标名称添加 SF Symbol。
+
+:::info
+由于 Apple 限制，除非下载 SF Symbol App（460MB+），否则目前不能在本地查看全部的 SF Symbol。
+
+若不想下载官方 App，您可以在 Google 搜索 [sf symbols online list](https://www.google.com/search?q=sf+symbols+online+list) 寻找在线预览网站。
+:::
+
+## 自定义图标
+
+### SVG 支持说明
+
+Jelly 对 SVG 的支持使用 [SVGView](https://github.com/exyte/SVGView) 实现。它不是完整的 SVG 支持，因此，有些 svg（例如内嵌 image 标签的）无法支持。
+
+:::info
+需要确保 SVG 资源内部 path 的 stroke color 是 currentColor。这样才能跟随 Jelly 的主题色变化
+:::
+
+### 使用 AI 制作图标
+
+除直接下载外，您也可以使用 AI 制作图标。但我个人感觉目前 ai 直接生成 svg 的效果都不太好，可以试试让 ai 生成 png 图标。提示词可以加入“SF Symbol 风格”，和 Jelly 的内置图标看起来更相似。
+
+#### 编辑 SVG
+
+若您想对 SVG 内部的 path 进行可视化编辑（例如，增加、减少 path 位置，对贝塞尔曲线进行调整），可以使用 figma 等工具。
+
+#### 编辑 PNG
+
+如果没有 photoshop，推荐使用 [photopea](https://www.photopea.com/)（一个在线版 photoshop）。
+
+#### 图标分享
+
+欢迎在 [这里](/guide/resources/icons) 分享您创作的图标。
+
+### 附录：免费 SVG 资源网站推荐
+
+[lucide.dev](https://lucide.dev/icons/)
+
+大量优质的 svg 资源，stroke-width 调到 1.75px 和 SF Symbol 比较搭。

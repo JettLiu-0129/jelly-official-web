@@ -1,0 +1,23 @@
+/* 防止页面切换时滚动条导致的宽度跳动 */
+html {
+  scrollbar-gutter: stable;
+}
+
+.rspress-logo {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.img-radius-sm {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.img-radius-lg {
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.rspress-doc-footer > footer > div:nth-child(1) {
+  padding-left: 0;
+}
