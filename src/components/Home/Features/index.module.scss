@@ -1,0 +1,91 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.featureSection {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 160px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  // 偶数项反转布局
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 24px 0;
+  color: var(--rp-c-text-1);
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--rp-c-text-2);
+  margin: 0;
+
+  strong {
+    font-weight: 600;
+    color: var(--rp-c-text-1);
+  }
+}
+
+.media {
+  flex: 1;
+  min-width: 0;
+}
+
+.video,
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.video {
+  background: #000;
+}
+
+// 移动端适配
+@media (max-width: 1024px) {
+  .features {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .featureSection {
+    flex-direction: column !important;
+    gap: 32px;
+    margin-bottom: 100px;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,19 @@
+[
+  "index",
+  "contact",
+  {
+    "type": "file",
+    "name": "buy-me-a-coffee",
+    "label": "请我喝一杯奶茶 ☕️"
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "section-header",
+    "label": "公告"
+  },
+  "changelog",
+  "privacy",
+  "terms"
+]

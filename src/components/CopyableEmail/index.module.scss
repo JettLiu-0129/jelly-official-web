@@ -1,0 +1,93 @@
+.emailContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  }
+
+  :global(html.dark) & {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.15);
+    }
+  }
+}
+
+.emailLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--rp-c-text-1);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--rp-c-brand);
+  }
+}
+
+.emailIcon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.emailText {
+  font-family: var(--rp-font-family-mono);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--rp-c-text-2);
+
+  &:hover {
+    background-color: var(--rp-c-brand);
+    border-color: var(--rp-c-brand);
+    color: white;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  :global(html.dark) & {
+    border-color: rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      background-color: var(--rp-c-brand);
+      border-color: var(--rp-c-brand);
+    }
+  }
+}
+
+.copyIcon {
+  display: block;
+}
+
+.copiedIcon {
+  font-size: 16px;
+  font-weight: bold;
+  color: currentColor;
+}

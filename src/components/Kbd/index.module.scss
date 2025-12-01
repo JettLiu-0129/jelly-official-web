@@ -1,0 +1,60 @@
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+  font-size: 0.875em;
+  line-height: 1.4;
+  color: var(--rp-c-text-1);
+  background-color: var(--rp-c-bg-soft);
+  border: 1px solid var(--rp-c-divider);
+  border-radius: 6px;
+  box-shadow: 0 1px 0 0 var(--rp-c-divider), 0 2px 4px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+  vertical-align: middle;
+
+  /* 立体效果 */
+  border-bottom-width: 2px;
+
+  .kbdSymbol {
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+
+  .kbdName {
+    font-size: 0.9em;
+  }
+
+  /* 暗色主题优化 */
+  :global(html.dark) & {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.shortcut {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  vertical-align: middle;
+
+  .shortcutSeparator {
+    display: inline-block;
+    margin: 0 2px;
+    font-size: 0.875em;
+    color: var(--rp-c-text-2);
+    font-weight: 500;
+    user-select: none;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .kbd {
+    padding: 2px 6px;
+    font-size: 0.8125em;
+  }
+}

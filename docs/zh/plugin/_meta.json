@@ -1,0 +1,27 @@
+[
+  "market",
+  "add-service-plugin",
+  {
+    "type": "divider"
+  },
+  {
+    "type": "section-header",
+    "label": "插件开发"
+  },
+  "architect",
+  {
+    "type": "dir",
+    "name": "development",
+    "label": "开发指南",
+    "collapsible": true,
+    "collapsed": false
+  },
+  {
+    "type": "dir",
+    "name": "api",
+    "label": "API参考",
+    "collapsible": true,
+    "collapsed": false
+  },
+  "deploy"
+]

@@ -1,0 +1,49 @@
+# 大模型服务
+
+## OpenAI 兼容服务商列表
+
+### 表单字段填写指南
+
+- **API Key**：点击下面列表“服务商”中的服务商名称前往官网注册获取
+
+- **Base URL**：Jelly 中已内置，一般无需修改，如果要修改可以前往服务商官网查看。
+
+- **模型名称**：参考列表“支持模型列表”获取
+
+:::warning
+部分厂商没有经过开发者验证，可能会出现调用不通的情况。如果有，请及时[反馈给开发者](/about/contact)
+:::
+
+| <div style={{ width: '100px' }}>服务商</div>       | 支持模型列表                                                                                                                     | <div style={{ width: '40px' }}>定价</div>                                                            | <div style={{ width: '170px' }}>有免费额度/免费模型</div> |
+| :------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
+| [302.AI](https://302.ai)                           | [模型列表](https://302.ai/product/list?cate=api&tag=LLM)                                                                         | [定价](https://302.ai/product/list?cate=api&tag=LLM)                                                 | 有（新用户免费额度）                                      |
+| [AiHubMix](https://aihubmix.com)                   | [模型列表](https://aihubmix.com/models)                                                                                          | [定价](https://aihubmix.com/models)                                                                  | 有 （少量免费模型）                                       |
+| [OpenAI](https://platform.openai.com/)             | [模型列表](https://platform.openai.com/docs/models/overview)：gpt-4o、gpt-4o-mini 等                                             | [定价](https://openai.com/api/pricing/)                                                              | 无                                                        |
+| [Claude](https://console.anthropic.com/)           | [模型列表](https://docs.anthropic.com/en/docs/about-claude/models)：Claude 3.5 Sonnet、Claude 3.5 Haiku 等                       | [定价](https://docs.anthropic.com/en/docs/about-claude/models)                                       | 无                                                        |
+| [Gemini](https://ai.google.dev/aistudio)           | [模型列表](https://ai.google.dev/gemini-api/docs?hl=zh-cn)                                                                       | [定价](https://ai.google.dev/pricing?hl=zh-cn)                                                       | 有（免费方案）                                            |
+| [DeepSeek](https://platform.deepseek.com/)         | [模型列表](https://api-docs.deepseek.com/)：deepseek-chat 等                                                                     | [定价](https://api-docs.deepseek.com/zh-cn/quick_start/pricing)                                      | 无                                                        |
+| [豆包](https://www.volcengine.com/product/doubao)  | [模型列表](https://www.volcengine.com/docs/82379/1099320)：Doubao-pro-32k、Doubao-lite-32k 等                                    | [定价](https://www.volcengine.com/docs/82379/1099320)                                                | 无                                                        |
+| [智谱 GLM](https://bigmodel.cn/)                   | [模型列表](https://bigmodel.cn/pricing)：GLM-4-Plus、GLM-4-FlashX、GLM-4-Flash 等                                                | [定价](https://bigmodel.cn/pricing)                                                                  | 有（GLM-4-Flash 免费）                                    |
+| [Kimi](https://platform.moonshot.cn/)              | [模型列表](https://platform.moonshot.cn/docs/intro)：moonshot-v1-8k、moonshot-v1-32k、moonshot-v1-128k 等                        | [定价](https://platform.moonshot.cn/docs/pricing/chat)                                               | 无                                                        |
+| [零一万物](https://platform.lingyiwanwu.com/)      | [模型列表](https://platform.lingyiwanwu.com/docs)：yi-large、yi-medium、yi-lightning 等                                          | [定价](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%AE%A1%E8%B4%B9)          | 无                                                        |
+| [文心一言](https://console.bce.baidu.com/qianfan/) | [模型列表](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)：ERNIE 4.0、ERNIE 3.5、ERNIE Speed、ERNIE Lite、ERNIE Tiny 等 | [定价](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)                                       | 有（部分免费）                                            |
+| [混元](https://console.cloud.tencent.com/hunyuan/) | [模型列表](https://cloud.tencent.com/document/product/1729)：hunyuan-pro、hunyuan-standard、hunyuan-lite 等                      | [定价](https://cloud.tencent.com/document/product/1729/97731)                                        | 有（hunyuan-lite 免费）                                   |
+| [Grok](https://x.ai/api)                           | [模型列表](https://docs.x.ai/docs/models)：grok-2-1212、grok-beta 等                                                             | [定价](https://docs.x.ai/docs/models)                                                                | 无                                                        |
+| [Groq](https://console.groq.com/)                  | [模型列表](https://console.groq.com/docs/quickstart)                                                                             | 完全免费（个人使用）                                                                                 | 有（完全免费）                                            |
+| [OpenRouter](https://openrouter.ai/)               | [模型列表](https://openrouter.ai/models)                                                                                         | [定价](https://openrouter.ai/models)                                                                 | 根据模型而定                                              |
+| [硅基流动](https://siliconflow.cn/)                | [模型列表](https://cloud.siliconflow.cn/models?types=chat)：Qwen2.5-7B、InternLM2.5-7B-Chat 等                                   | [定价](https://cloud.siliconflow.cn/models?types=chat)                                               | 有（部分免费+新用户 2000 万 Token）                       |
+| [模力方舟](https://ai.gitee.com/)                  | [模型列表](https://ai.gitee.com/serverless-api#text-generation)                                                                  | [定价](https://ai.gitee.com/serverless-api#text-generation)                                          | 根据模型而定                                              |
+| [Azure OpenAI](https://azure.microsoft.com/)       | [模型列表](https://learn.microsoft.com/zh-cn/azure/cognitive-services/openai/)：gpt-4o、gpt-4o-mini 等                           | [定价](https://azure.microsoft.com/zh-cn/pricing/details/cognitive-services/openai-service/#pricing) | 无                                                        |
+| [Ollama](https://ollama.com/)                      | [模型列表](https://ollama.com/library)：llama3.2 等本地模型                                                                      | 完全免费（离线本地运行）                                                                             | 有（完全免费）                                            |
+| [LM Studio](https://lmstudio.ai/)                  | 支持本地运行的各类开源模型                                                                                                       | 完全免费（离线本地运行）                                                                             | 有（完全免费）                                            |
+| [SophNet](https://www.sophnet.com/)                | DeepSeek V3 Fast 等                                                                                                              | 查看官网定价                                                                                         | 根据模型而定                                              |
+
+## Q&A
+
+### 什么是 OpenAI 兼容服务？
+
+是指模型服务提供商的 API 接口，兼容 OpenAI 的规范。目前大多数的大模型服务提供商都支持此格式调用。
+
+Jelly 会尝试使用标准的 OpenAI 兼容格式调用这些服务商的 /chat/completions 接口。
+
+你也可以通过选择“自定义 OpenAI”服务并且手动填写 Base URL，来调用任意 OpenAI 兼容服务

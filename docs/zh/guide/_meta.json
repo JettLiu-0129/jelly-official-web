@@ -1,0 +1,25 @@
+[
+  "intro",
+  "quick-start",
+  {
+    "type": "dir",
+    "name": "basic",
+    "label": "基本使用",
+    "collapsible": true,
+    "collapsed": false
+  },
+  {
+    "type": "dir",
+    "name": "advanced",
+    "label": "进阶技巧",
+    "collapsible": true,
+    "collapsed": false
+  },
+  {
+    "type": "dir",
+    "name": "resources",
+    "label": "资源分享",
+    "collapsible": true,
+    "collapsed": false
+  }
+]

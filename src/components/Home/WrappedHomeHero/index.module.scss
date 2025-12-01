@@ -1,0 +1,59 @@
+.jlHomeHero {
+  a {
+    padding: 0 16;
+
+    &[class*="brand"] {
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-color: currentColor; /* 控制颜色 */
+        mask: url("../../../../docs/public/svgs/apple.svg") no-repeat center;
+        mask-size: contain;
+        -webkit-mask: url("../../../../docs/public/svgs/apple.svg") no-repeat
+          center;
+        -webkit-mask-size: contain;
+        margin-right: 6px;
+      }
+    }
+
+    &[class*="alt"] {
+      position: relative;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-color: currentColor; /* 控制颜色 */
+        mask: url("../../../../docs/public/svgs/windows.svg") no-repeat center;
+        mask-size: contain;
+        -webkit-mask: url("../../../../docs/public/svgs/windows.svg") no-repeat
+          center;
+        -webkit-mask-size: contain;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  h1 {
+    font-family: "SF Pro Rounded", "Helvetica Rounded", "Arial Rounded MT Bold",
+      "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+
+  // 暗色模式下加些阴影，更美观
+  :global(html.dark) & p {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  // 按钮下方
+  > div > div:nth-child(2) > div::after {
+    content: "Available for macOS 15+";
+    display: block;
+    font-size: 14px;
+    color: var(--rp-c-text-2);
+    opacity: 0.8;
+    margin-top: 16px;
+  }
+}
