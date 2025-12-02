@@ -1,0 +1,142 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+
+  :global(html.dark) & {
+    background: #1a1a1a;
+  }
+}
+
+.hero {
+  flex: 0 0 auto;
+  padding: 120px 24px 80px;
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+  :global(html.dark) & {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  }
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  color: #1a202c;
+  letter-spacing: -1px;
+
+  :global(html.dark) & {
+    color: #f7fafc;
+  }
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+  color: #4a5568;
+
+  :global(html.dark) & {
+    color: #cbd5e0;
+  }
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #718096;
+
+  :global(html.dark) & {
+    color: #a0aec0;
+  }
+}
+
+.features {
+  flex: 1 0 auto;
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.featureCard {
+  padding: 32px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  :global(html.dark) & {
+    background: #2d3748;
+    border-color: #4a5568;
+
+    &:hover {
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.featureIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.featureTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #2d3748;
+
+  :global(html.dark) & {
+    color: #f7fafc;
+  }
+}
+
+.featureDesc {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  color: #718096;
+
+  :global(html.dark) & {
+    color: #a0aec0;
+  }
+}
+
+.footer {
+  flex: 0 0 auto;
+  padding: 32px 24px;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  background: #f7fafc;
+
+  :global(html.dark) & {
+    border-top-color: #4a5568;
+    background: #2d3748;
+  }
+}
+
+.footerText {
+  margin: 0;
+  font-size: 14px;
+  color: #718096;
+
+  :global(html.dark) & {
+    color: #a0aec0;
+  }
+}
