@@ -2,7 +2,7 @@
 
 Jelly 的工具支持灵活的图标配置，您可以配置或创作喜爱的图标，以帮助您快速找到功能。
 
-为了确保显示效果，目前图标只支持矢量风格，不支持 png。
+为了确保显示效果，目前只支持矢量风格的图标（如果是 png，会以模板方式渲染。非透明通道用纯色着色，透明通道不着色）。
 
 ## 内置图标
 
@@ -14,9 +14,9 @@ Jelly 支持系统内置的 SF Symbol 图标，您可填入图标名称添加 SF
 若不想下载官方 App，您可以在 Google 搜索 [sf symbols online list](https://www.google.com/search?q=sf+symbols+online+list) 寻找在线预览网站。
 :::
 
-## 自定义 SVG
+## 自定义图标
 
-### 支持说明
+### SVG 支持说明
 
 Jelly 对 SVG 的支持使用 [SVGView](https://github.com/exyte/SVGView) 实现。它不是完整的 SVG 支持，因此，有些 svg（例如内嵌 image 标签的）无法支持。
 
@@ -34,9 +34,9 @@ Jelly 对 SVG 的支持使用 [SVGView](https://github.com/exyte/SVGView) 实现
 需要确保下载的 SVG 资源，内部 path 的 stroke color 是 currentColor。这样才能跟随 Jelly 的主题色变化
 :::
 
-### 使用 AI 制作 SVG
+### 使用 AI 制作图标
 
-除直接下载外，您也可以使用 AI 制作 SVG。
+除直接下载外，您也可以使用 AI 制作图标。
 
 :::tip
 目前 Claude 以及 Nano Banana Pro 对于 svg 的生成能力比较好。

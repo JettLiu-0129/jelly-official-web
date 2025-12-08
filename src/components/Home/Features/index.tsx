@@ -56,7 +56,7 @@ const featuresList: FeatureItem[] = [
     title: "功能全由你定制",
     description: (
       <>
-        <strong>「小而美」</strong>是 Jelly 第一设计原则。虽然 Jelly
+        <strong>「简洁而强大」</strong>是 Jelly 第一设计原则。虽然 Jelly
         内置了数十种免费功能，但您<strong>全部可以关闭</strong>
         ，保持界面清爽干净。
         <br />
