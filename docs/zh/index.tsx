@@ -1,5 +1,4 @@
 import { HomePage } from "@/components/Home";
-// import { HomeICP } from "@/components/HomeICP";
 
 export const frontmatter = {
   // 声明布局类型
@@ -7,6 +6,4 @@ export const frontmatter = {
   pageType: "custom",
 };
 
-// 使用 HomeICP 以通过 ICP 备案
-// export default HomeICP;
 export default HomePage;
